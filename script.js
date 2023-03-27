@@ -46,5 +46,43 @@ function oddeven(){
    document.getElementById("oddevenot").style.display="block"; 
   }
 
+//  Check if a word is palidrome or not
+
+function checkpalindrome() {
+  const word = document.getElementById("input7").value;
+  const length = word.length;
+  let result = `${word}  is a Palindrome`;
+
+  for (let i = 0; i < length / 2; i++) {
+    if (word[i] !== word[length - 1 - i]) {
+      result = `${word}  is not a Palindrome`;
+    }
+  }
+    document.getElementById("result").textContent = result;
+  
+  document.getElementById("result").style.display="block"; 
+}
 
 
+//Printing star pattern
+
+let stars = '';
+
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= i; j++) {
+    stars += "*";
+  }
+  stars += "<br>";
+}
+
+document.getElementById("star").innerHTML = stars;
+  
+// Convert the First Letter of a String in to Uppercase
+
+function firstletter() {
+  let inputt = document.getElementById("input8").value;
+  let output = inputt.charAt(0).toUpperCase() + inputt.slice(1);
+  document.getElementById("firstlet").innerHTML = output;
+
+  document.getElementById("firstlet").style.display="block"; 
+}
