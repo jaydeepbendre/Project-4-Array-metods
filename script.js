@@ -66,21 +66,25 @@ function checkpalindrome() {
 
 //Printing star pattern
 
-let stars = '';
+  function starpattern(){
+  let stars = '';
+  let b= document.getElementById("input8").value;
 
-for (let i = 1; i <= 5; i++) {
-  for (let j = 1; j <= i; j++) {
-    stars += "*";
+  for (let i = 1; i <= b; i++) {
+    for (let j = 1; j <= i; j++) {
+      stars += "*";
+    }
+    stars += "<br>";
   }
-  stars += "<br>";
-}
+  document.getElementById("star").innerHTML = stars;
+  document.getElementById("star").style.display="block"; 
 
-document.getElementById("star").innerHTML = stars;
+  }
   
 // Convert the First Letter of a String in to Uppercase
 
 function firstletter() {
-  let inputt = document.getElementById("input8").value;
+  let inputt = document.getElementById("input9").value;
   let output = inputt.charAt(0).toUpperCase() + inputt.slice(1);
   document.getElementById("firstlet").innerHTML = output;
 
